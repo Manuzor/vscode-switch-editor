@@ -2,7 +2,12 @@
   "name": "switch-editor",
   "displayName": "Switch Editor",
   "description": "Switch to a different editor for the current file",
-  "version": "0.0.1",
+  "publisher": "manuzor",
+  "icon": "feather.png",
+  "repository": {
+    "url": "https://github.com/Manuzor/vscode-switch-editor"
+  },
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.50.0"
   },
@@ -10,7 +15,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onStartupFinished"
+    "onCommand:switch-editor.switch",
+    "onCommand:switch-editor.choose"
   ],
   "main": "./out/extension.js",
   "contributes": {

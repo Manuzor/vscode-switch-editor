@@ -1,65 +1,22 @@
 # switch-editor README
 
-This is the README for your extension "switch-editor". After writing up a brief description, we recommend including the following sections.
-
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This plugin allows you to invoke another editor (such as Sublime Text 3) from within vscode. It will open the other editor in exactly the same file, line, and column as in your current vscode text editor window.
 
-For example if there is an image subfolder under your extension project workspace:
+### Limitations
 
-\!\[feature X\]\(images/feature-x.png\)
+So far, only single cursors are supported. This plugin will take the primary cursor location and open the other editor with that.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Supported Editors
 
-## Requirements
+# `subl` - Sublime Text 3
+It's required that `subl.exe` (on windows) is locatable via the PATH environment variable. In other words you must be able to start Sublime Text 3 from any command prompt with the `subl` command.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Because the `subl` executable is used to invoke Sublime Text 3, this will always open the last active open window of Sublime Text 3 instead of always creating a new one. A new window is only created if no instance of Sublime Text 3 is running yet.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release of the vscode switch-editor extension.
