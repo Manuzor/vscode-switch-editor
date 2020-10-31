@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/Manuzor/vscode-switch-editor/issues"
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "engines": {
     "vscode": "^1.50.0"
   },
